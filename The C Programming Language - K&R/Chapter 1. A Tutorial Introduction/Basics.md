@@ -202,6 +202,10 @@ putchar(c);        // prints a character
     while ((c = getchar()) != EOF)
         if (c == '\n') // '\n' ASCII value is 10
     //NOTE: ′\n′ is a single character, and in expressions is just an integer; on the other hand, "\n" is a `string constant` that happens to contain only one character. Both are different.
+
+    //printf("%d and %d", '\n',"\n"); // second %d will output the memory address of "\n"(maybe that is garbage UB) 
+    //printf("%d and %d",'\n',"\n"[0]); //same
+
             ++nl;
     printf("%d\n", nl);
     ```
