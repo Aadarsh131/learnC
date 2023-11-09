@@ -107,7 +107,7 @@ c = a++ + b++;
 
 ### Precedence Table and some examples- 
 
-<img src='./img/precedenceTable.png'>
+<img src='./img/precedenceTable.png' alt = "PRECEDENCE TABLE">
 
 | Expression    | Equivalent to             | Associativity |
 | ------------- | ------------------------- | ------------- |
