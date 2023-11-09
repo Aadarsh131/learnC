@@ -76,12 +76,13 @@ a += b; //a = a + b;
 
 # 4.3 Increment and Decrement operators
 - `postfix-` a++, a-- (left associative, higher precedence than unary op)
+    > `i++` means “use the old value of `i` for now, but increment `i` later.” How much later? The C standard doesn’t specify a precise time,but it’s safe to assume that `i` will be incremented before the next statement is executed.
 - `prefix-` ++b, --b (right associative, same precedence as unary op)
 ```c
 int i = 1;
 int j = 2;
 k = ++i + j++;
-/* Order of evaluation-
+/* Below is not the Order of evaluation (otherwise j++ would execute first in the statement)-
 i = i + 1, so i = 2
 k = i + j, so k = 4
 j = j + 1, so j = 3
