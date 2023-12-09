@@ -184,4 +184,41 @@ switch (expression) {
 ```
 The `switch` statement is fairly complex; let’s look at its components one by one:
 
-- **Controlling expression**- 
+- **Controlling expression**- must be an integer expression (chars are treated as integers in C)
+- **Case Labels**-   
+    - must be an integer  
+    - cannot be a variable or function call   
+    - can not be duplicates
+    - several case labels can follow same statement
+    - Unfortunately, there is no way to specify a range of values
+    - default case doesn't need to come last
+    - a default case is not compulsory
+- **Statements**- ends with a *break*
+
+```c
+switch (grade) {
+  case 4:
+  case 3:
+  case 2:
+  case 1:  printf("Passing");
+           break;
+  case 0:  printf("Failing");
+           break;
+  default: printf("Illegal grade");
+           break;
+}
+```
+Or
+```c
+switch (grade) {
+  case 4: case 3: case 2: case 1:
+          printf("Passing");
+          break;
+
+  case 0: printf("Failing");
+          break;
+
+  default:printf("Illegal grade");
+          break;
+```
+
